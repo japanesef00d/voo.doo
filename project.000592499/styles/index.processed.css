@@ -1,0 +1,166 @@
+/**
+ * index.scss
+ * - Add any styles you want here!
+ */
+@import url("https://fonts.googleapis.com/css?family=El+Messiri");
+html {
+  box-sizing: border-box;
+}
+
+html *,
+html *:after,
+html *:before {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6;
+  font-family: 'El Messiri', sans-serif;
+}
+
+body::before {
+  content: ' ';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #b19cd9;
+  z-index: -1;
+}
+
+.card {
+  margin: 2rem auto 0;
+  position: relative;
+  padding: 2em;
+  background: #fff;
+}
+
+.card__title {
+  margin: 0 auto;
+  color: #333;
+  text-align: center;
+  font-size: 50px;
+  transition: .2s;
+}
+
+.card__subtitle {
+  margin: auto;
+  color: #333;
+  text-align: center;
+  font-size: 15px;
+  transform: translate3d(calc(var(--mouseY12) * 1px), calc(var(--mouseX12) * 1px), 0);
+  transition: .2s;
+  text-decoration: overline;
+  opacity: 40%;
+}
+
+.card__subtitle:hover {
+  color: #b19cd9;
+  transition: 0.2s ease-out;
+}
+
+.card__img {
+  display: block;
+  width: 20em;
+  max-width: 100%;
+  margin: 1em auto;
+  border-radius: 2px;
+}
+
+/**
+ * Card #12
+ */
+.card--12 {
+  --mouseX12: 0;
+  --mouseY12: 0;
+  perspective: 700px;
+}
+
+.card--12 .card__title {
+  transform: translate3d(calc(var(--mouseY12) * 1px), calc(var(--mouseX12) * 1px), 0);
+}
+
+.card--12 .card__title:hover {
+  color: #b19cd9;
+  transition: 0.2s ease-out;
+}
+
+#textoinput {
+  border: 0px;
+}
+
+.input {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+  font-family: 'El Messiri', sans-serif;
+  transform: translate3d(calc(var(--mouseX12) * -1px), calc(var(--mouseY12) * -1px), calc(var(--mouseX12) * -1px));
+}
+
+.input:value {
+  border: none;
+  font-family: 'El Messiri', sans-serif;
+  transform: translate3d(calc(var(--mouseX12) * -1px), calc(var(--mouseY12) * -1px), calc(var(--mouseX12) * -1px));
+}
+
+.input:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+  font-family: 'El Messiri', sans-serif;
+  transform: translate3d(calc(var(--mouseX12) *     -1px), calc(var(--mouseY12) * -1px), calc(var(--mouseX12) * -1px));
+}
+
+::placeholder {
+  font-family: 'El Messiri', sans-serif;
+  transform: translate3d(calc(var(--mouseX12) * -1px), calc(var(--mouseY12) * -1px), calc(var(--mouseX12) * -1px));
+  opacity: 70%;
+}
+
+.todos {
+  margin-top: 20px;
+  transform: translate3d(calc(var(--mouseX12) * 1px), calc(var(--mouseY12) * -1px), calc(var(--mouseX12) * -1px));
+  font-size: 15px;
+}
+
+.todos li.completed {
+  color: #b6b6b6;
+  text-decoration: line-through;
+  transition: 0.2s;
+}
+
+small {
+  text-align: justify;
+}
+
+small#help {
+  transform: translate3d(calc(var(--mouseX12) * -1px), calc(var(--mouseY12) * -1px), calc(var(--mouseX12) * -1px));
+  color: #b5b5b5;
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 10px;
+  font-style: italic;
+}
+
+i {
+  margin-right: 5px;
+  padding: 10px 0px 10px;
+}
+
+i:hover {
+  color: #b19cd9;
+  transition: 0.2s;
+}
+
+.copyfooter {
+  text-align: center;
+  color: #333;
+  margin-top: 3rem;
+  font-size: 10px;
+  margin-left: 35%;
+}
